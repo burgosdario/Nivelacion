@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - Project Board</title>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="workspace-header">
+                <div class="workspace-icon">W</div>
+                <div class="workspace-info">
+                    <p class="workspace-title">Workspace</p>
+                    <p class="workspace-subtitle">Productivity Suite</p>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📥</span>
+                    <span>Inbox</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📋</span>
+                    <span>Board</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-spacer"></div>
+
+            <nav class="nav-menu bottom">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📦</span>
+                    <span>Archived</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">❓</span>
+                    <span>Help</span>
+                </a>
+            </nav>
+
+            <button class="add-task-btn">+ Add Task</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1 class="app-title">FocusFlow</h1>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search tasks..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="header-btn notification-btn">🔔</button>
+                    <button class="header-btn settings-btn">⚙️</button>
+                    <div class="user-avatar">DM</div>
+                </div>
+            </header>
+
+            <section class="board-section">
+                <div class="board-header">
+                    <h2 class="board-title">Project Board</h2>
+                    <p class="board-subtitle">Q4 Roadmap Implementation</p>
+                </div>
+
+                <div class="kanban-board">
+                    <div class="kanban-column" data-column="todo">
+                        <div class="column-header">
+                            <h3 class="column-title">To Do</h3>
+                            <span class="column-count">4</span>
+                        </div>
+                        <div class="tasks-container" id="todo-tasks">
+                            <div class="task-card" draggable="true">
+                                <div class="task-badge urgent">URGENT</div>
+                                <h4 class="task-title">Define brand guidelines for mobile application</h4>
+                                <p class="task-description">Ensure consistency across all UI components and typography scales defined in the system.</p>
+                                <div class="task-footer">
+                                    <span class="task-id">🔗 12</span>
+                                    <div class="task-avatars"></div>
+                                </div>
+                            </div>
+                            <div class="task-card" draggable="true">
+                                <div class="task-badge design">DESIGN</div>
+                                <h4 class="task-title">Refine task card hover interactions</h4>
+                                <p class="task-description"></p>
+                                <div class="task-footer">
+                                    <span class="task-id">🔗 3</span>
+                                    <div class="task-avatars">
+                                        <span class="avatar">AB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kanban-column" data-column="inprogress">
+                        <div class="column-header">
+                            <h3 class="column-title">In Progress</h3>
+                            <span class="column-count">2</span>
+                        </div>
+                        <div class="tasks-container" id="inprogress-tasks">
+                            <div class="task-card active" draggable="true">
+                                <div class="task-badge engineering">ENGINEERING</div>
+                                <h4 class="task-title">Integrate Material Design symbols library</h4>
+                                <p class="task-description">Mapping all icon strings from the backend JSON to frontend components.</p>
+                                <div class="task-footer">
+                                    <span class="task-id">🔗 8</span>
+                                    <div class="task-avatars">
+                                        <span class="avatar">JD</span>
+                                        <span class="avatar">KL</span>
+                                    </div>
+                                </div>
+                                <span class="task-status">ACTIVE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kanban-column" data-column="done">
+                        <div class="column-header">
+                            <h3 class="column-title">Done</h3>
+                            <span class="column-count">8</span>
+                        </div>
+                        <div class="tasks-container" id="done-tasks">
+                            <div class="task-card" draggable="true">
+                                <div class="task-badge release">RELEASE</div>
+                                <h4 class="task-title">System-wide typography update</h4>
+                                <p class="task-description"></p>
+                                <div class="task-footer">
+                                    <span class="completed-date">COMPLETED OCT 12</span>
+                                    <div class="task-avatars">
+                                        <span class="avatar">DM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>
